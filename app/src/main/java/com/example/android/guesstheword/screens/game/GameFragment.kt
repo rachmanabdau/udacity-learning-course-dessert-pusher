@@ -33,7 +33,7 @@ import com.example.android.guesstheword.databinding.GameFragmentBinding
  */
 class GameFragment : Fragment() {
 
-    lateinit var viewModel: GameViewModel
+    private lateinit var viewModel: GameViewModel
 
     private lateinit var binding: GameFragmentBinding
 
