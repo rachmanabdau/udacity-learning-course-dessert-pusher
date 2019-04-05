@@ -15,7 +15,7 @@ class GameViewModel : ViewModel() {
         // One second game in milisecond
         const val ONE_SECOND = 1000L
         // Timer for one game is one minute
-        const val COUNT_DOWN_TIME = 60000L
+        const val COUNT_DOWN_TIME = 10000L
     }
 
     // The current word

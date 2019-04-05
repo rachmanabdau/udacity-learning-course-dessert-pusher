@@ -33,8 +33,8 @@ import com.example.android.guesstheword.databinding.ScoreFragmentBinding
  */
 class ScoreFragment : Fragment() {
 
-    lateinit private var viewModel: ScoreViewModel
-    lateinit private var viewModelFactory: ScoreViewModelFactory
+    private lateinit var viewModel: ScoreViewModel
+    private lateinit var viewModelFactory: ScoreViewModelFactory
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -54,7 +54,7 @@ class ScoreFragment : Fragment() {
         viewModel = ViewModelProviders.of(this, viewModelFactory)
                 .get(ScoreViewModel::class.java)
 
-        binding.playAgainButton.setOnClickListener { viewModel.onGamePlayAgain() }
+        binding.scoreViewModel = viewModel
 
         viewModel.score.observe(this, Observer { newGameScore ->
             binding.scoreText.text = newGameScore.toString()
